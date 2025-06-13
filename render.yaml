@@ -1,0 +1,17 @@
+
+previews:
+  generation: automatic
+
+services:
+  - type: web
+    runtime: python
+    name: reddit-karma-bot
+    repo: https://github.com/DigitalCreationsCo/Reddit-Karma-Bot
+    numInstances: 1
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python index.py
+    autoDeploy: true
+    maxShutdownDelaySeconds: 120
